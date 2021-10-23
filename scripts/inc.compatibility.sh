@@ -732,6 +732,13 @@ quickaccesswallet" # Include QuickAccessWallet with Android 11.0 for Pixel Launc
   fi
 }
 
+api31hack(){
+  if [ "$API" -eq "31" ]; then
+    gappscore="$gappscore
+gmssetup"
+  fi
+}
+
 sdkversionhacks(){
   case "$package" in
     com.google.android.configupdater|com.google.android.feedback|com.google.android.gsf.login|com.google.android.partnersetup|com.google.android.setupwizard|com.google.android.syncadapters.contacts)
@@ -744,6 +751,7 @@ sdkversionhacks(){
         *28) sdkversion="28";;
         *29) sdkversion="29";;
         *30) sdkversion="30";;
+        *31) sdkversion="31";;
         *) ;;
       esac;;
   esac
